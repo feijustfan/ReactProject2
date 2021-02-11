@@ -31,3 +31,9 @@ function parse(tokens) {
   return syntaxTree;
 }
 
+function add(number1, number2){
+  
+  if (!number1==null && !number2== null){
+    return number1 + number2;
+  }
+}
