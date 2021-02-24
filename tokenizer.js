@@ -1,6 +1,16 @@
 //tokenizer
+//input: string
 function tokenizer(input){
   var tk = [];
+  for (let i = 0; input[i] !== null; i++){
+    if (typeof(input[i]) == Number){
+      var numberInTk = numberProcess(input);
+      tk.push(numberInTk);
+    }else{
+      tk.push(input[i]);
+    }
+  }
+
 
   function croakErr(msg){
     throw new console.error(msg);
@@ -8,11 +18,10 @@ function tokenizer(input){
   }
 }
 //process 1 digit, 2 digit, 3 digit numbers... 
-function numMorethan9(strnum){
+function numProcess(strnum){
   var numOutput = strnum[0];
-  for(let i = 1; strnum[i];i++){
+  for(let i = 1; strnum[i] !== " ";i++){
     numOutput = numOutput*10 + strnum[i];
-    
 
   }
 }

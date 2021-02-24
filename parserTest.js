@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
 //set operator precedence
 var PRECEDENCE = {
   "=": 1,
