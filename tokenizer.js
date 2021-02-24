@@ -2,7 +2,7 @@
 //input: string
 function tokenizer(input){
   var tk = [];
-  for (let i = 0; input[i] !== null; i++){
+  for (let i = 0; input[i] !== null && input[i] !== " "; i++){
     if (typeof(input[i]) == Number){
       var numberInTk = numberProcess(input);
       tk.push(numberInTk);
@@ -11,7 +11,7 @@ function tokenizer(input){
     }
   }
 
-
+//need further adjust...
   function croakErr(msg){
     throw new console.error(msg);
     
